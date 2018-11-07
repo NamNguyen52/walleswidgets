@@ -1,0 +1,21 @@
+<table>
+  <caption>Walle's Widgets</caption>
+  <tr>
+    <th>Name</th>
+    <th class="sort-colors" ng-click="sortColors()">
+      Color
+      <span ng-if="widgetsData.isSortAscend">&#8593;</span>
+      <span ng-if="!widgetsData.isSortAscend">&#8595;</span>
+    </th>
+    <th>Description</th>
+    <th>Machine</th>
+    <th>Size</th>
+  </tr>
+  <tr ng-repeat="widget in widgetsData.widgets">
+    <td>{{ widget.name }}</td>
+    <td>{{ widget.color }}</td>
+    <td>{{ widget.description }}</td>
+    <td>{{ widget.machine.title }}</td>
+    <td>{{ widget.size.title }}</td>
+  </tr>
+</table>

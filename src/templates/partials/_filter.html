@@ -1,0 +1,9 @@
+<div class="controls">
+  <h3>Filter by</h3>
+  <span class="color-filters"
+        ng-repeat="color in widgetsData.filterColors"
+        ng-click="handleSelectedColorFilter(color)"
+        ng-class="{'selected-filter': widgetsData.selectedColorFilters.includes(color) }">
+    {{ color }}
+  </span>
+</div>

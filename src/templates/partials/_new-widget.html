@@ -1,0 +1,45 @@
+<div class="controls">
+  <h3>Create new widget</h3>
+  <form>
+    Name <small>(required)</small>:
+    <br/>
+    <input type="text" ng-model="newWidget.name"></input>
+    <br/>
+    <br/>
+
+    Description <small>(required)</small>:
+    <br/>
+    <input type="text" ng-model="newWidget.description"></input>
+    <br/>
+    <br/>
+
+    Color <small>(required)</small>:
+    <br/>
+    <input type="text" ng-model="newWidget.color"></input>
+    <br/>
+    <br/>
+
+    Size:
+    <br/>
+    <select ng-model="newWidget.size_id" ng-options="size.id as size.title for size in widgetsData.sizes">
+      <option value="">Select Size</option>
+    </select>
+    <br/>
+    <br/>
+
+    Machine:
+    <br/>
+    <select ng-model="newWidget.machine_id" ng-options="machine.id as machine.title for machine in widgetsData.machines">
+      <option value="">Select Machine</option>
+    </select>
+    <br/>
+    <br/>
+
+    <input type="submit"
+           ng-click="createWidget()"
+           ng-if="newWidget.name.length > 0 &&
+           newWidget.description.length > 0 &&
+           newWidget.color.length > 0"
+           value="Submit" />
+  </form>
+</div>

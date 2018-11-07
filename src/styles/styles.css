@@ -1,0 +1,47 @@
+body, html {
+  margin: 0;
+  padding: 16px;
+}
+
+body {
+  position: relative;
+  font-family: sans-serif;
+}
+
+.container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.color-filters {
+  position: relative;
+  margin: 4px;
+  padding: 4px;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 10px;
+  color: rgba(0,0,0,0.8);
+}
+
+.color-filters:hover {
+  border: 1px solid rgba(0,0,0,0.5);
+}
+
+.selected-filter {
+  background-color: #0074D9;
+  color: rgba(255,255,255,0.8);
+}
+
+.selected-filter:hover {
+  color: rgba(255,255,255,1);
+}
+
+.controls {
+  padding: 8px;
+  height: auto;
+  border: 1px solid rgba(0,0,0,0.8);
+  margin-bottom: 16px;
+  border-radius: 2px;
+}
